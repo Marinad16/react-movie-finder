@@ -1,13 +1,16 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f3cba5;
+  background-color: #25161b;
+  font-family: 'Montserrat', sans-serif;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -29,30 +32,30 @@ input[type="radio"].visually-hidden {
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-    max-width: 1201px;
-    margin: 0 auto;
+  max-width: 1201px;
+  margin: 0 auto;
 }
 
 .link {
-    text-decoration: none;
-    display: block;
+  text-decoration: none;
+  display: block;
 }
 
 .list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site-header {
   width: 100%;
-  background-color: grey;
+  background-color: #453953;
 }
 
 .navigation {
@@ -71,12 +74,19 @@ img {
 .nav-link {
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff;
   margin-right: 10px;
+  color: #f3cba5;
+  opacity: 0.5;
+  font-weight: 600;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+  opacity: 1;
 }
 
 .active-link {
-  color: blueviolet;
+  opacity: 1;
 }
 
 .movies-list {

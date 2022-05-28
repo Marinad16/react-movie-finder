@@ -18,7 +18,6 @@ const Navigation = () => (
         </NavLink>
       </li>
     </ul>
-    <SearchForm />
   </nav>
 );
 

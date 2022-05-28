@@ -1,19 +1,17 @@
-import React from 'react'
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import MovieApi from "../../services/MoviesApi";
+import MoviesApi from '../services/MoviesApi';
 
-const MovieList = () => {
+const MovieList = ({ query } ) => {
   const [movies, setMovies] = useState([]);
+  console.log(query);
 
   useEffect(() => {
-    MovieApi.fetchTrendingMovies('day').then((data) => setMovies(data));
-  }, []);
+    MoviesApi.fetchMovieWithQuery(query).then((data) => setMovies(data));
+  }, [query]);
 
-  useEffect(() => {
-    MovieApi.fetchMovieWithQuery('cat').then((data) => setMovies(data))
-  }, [])
-
+  console.log(movies);
+  
   return (
         <ul className="list movies-list">
         {movies.map((movie) => (

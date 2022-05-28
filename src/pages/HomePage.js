@@ -5,9 +5,10 @@ import MovieApi from "../services/MoviesApi";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
+  const day = "day";
 
   useEffect(() => {
-    MovieApi.fetchTrendingMovies("day").then((data) => setMovies(data));
+    MovieApi.fetchTrendingMovies(day).then((data) => setMovies(data));
   }, []);
 
   return (

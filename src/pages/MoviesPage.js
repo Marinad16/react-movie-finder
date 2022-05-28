@@ -1,11 +1,18 @@
-import {useState, useEffect} from 'react'
-import MovieList from '../components/UI/MovieList';
-import MovieApi from "../services/MoviesApi";
+import { useState } from 'react';
+import MovieList from '../components/MovieList';
+import SearchForm from '../components/SearchForm/SearchForm';
 
 const MoviesPage = () => {
+  const [query, setQuery] = useState("");
+
+  const handleSubmit = (query) => {
+    setQuery(query);
+  };
+
   return (
     <div>
-      <MovieList />
+      <SearchForm onSubmit={handleSubmit} />
+      {query !== "" && (<MovieList query={query} />)}
     </div>
   );
 };

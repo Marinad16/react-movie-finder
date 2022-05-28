@@ -6,10 +6,12 @@ const fetchMovieDetails = movieId => {
 }
 
 const fetchMovieWithQuery = searchQuery => {
-  return fetch(
-    `${baseUrl}/search/movie?api_key=${apiKey}&query=${searchQuery}`
-  )
-    .then(res => res.json()).then(result => result.results)
+  return fetch(`${baseUrl}/search/movie?api_key=${apiKey}&query=${searchQuery}`)
+    .then((res) => res.json())
+    .then((result) => result.results)
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 const fetchTrendingMovies = (period) => {
