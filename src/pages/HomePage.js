@@ -16,13 +16,15 @@ const HomePage = () => {
       <h1>Trending now</h1>
       <ul className="list movies-list">
         {movies.map((movie) => (
-          <li key={movie.id} className="item movie-item">
-            <img
-              src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-              alt={movie.original_title}
-            />
-            <Link to={`/movies/${movie.id}`}>{movie.original_title}</Link>
-          </li>
+            <Link className="movie-link" to={`/movies/${movie.id}`}>
+                <li key={movie.id} className="item movie-item">
+                    <img
+                        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                        alt={movie.original_title}
+                    />
+                    <p className="movie-title">{movie.original_title}</p>
+                </li>
+            </Link>
         ))}
       </ul>
     </div>

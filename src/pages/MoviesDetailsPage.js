@@ -19,7 +19,16 @@ const MoviesDetailsPage = () => {
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             alt={movie.original_title}
           />
+            <div>
+              <p>genres: {movie.genres.map((genre) => (
+                  <p>{genre.name}</p>
+                  )
+              )}</p>
+              <p>budget: {movie.budget}</p>
+
+            </div>
           <p>{movie.overview}</p>
+
         </>
       )}
     </div>
