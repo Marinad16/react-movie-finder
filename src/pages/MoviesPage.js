@@ -1,18 +1,15 @@
-import { useState } from 'react';
+
+import { useSearchParams } from "react-router-dom";
 import MovieList from '../components/MovieList';
-import SearchForm from '../components/SearchForm/SearchForm';
 
 const MoviesPage = () => {
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleSubmit = (query) => {
-    setQuery(query);
-  };
+  const movieQuery = searchParams.get('query') || "";
 
   return (
     <div>
-      <SearchForm onSubmit={handleSubmit} />
-      {query !== "" && (<MovieList query={query} />)}
+      {movieQuery !== "" && (<MovieList query={movieQuery} />)}
     </div>
   );
 };

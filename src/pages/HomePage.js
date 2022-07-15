@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {Slider} from "../components/Slider";
 import MovieApi from "../services/MoviesApi";
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
 
   return (
     <div className="">
+        <Slider/>
       <h1>Trending now</h1>
       <ul className="list movies-list">
         {movies.map((movie) => (

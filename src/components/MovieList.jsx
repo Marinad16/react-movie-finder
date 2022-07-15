@@ -4,13 +4,10 @@ import MoviesApi from '../services/MoviesApi';
 
 const MovieList = ({ query } ) => {
   const [movies, setMovies] = useState([]);
-  console.log(query);
 
   useEffect(() => {
     MoviesApi.fetchMovieWithQuery(query).then((data) => setMovies(data));
   }, [query]);
-
-  console.log(movies);
   
   return (
         <ul className="list movies-list">

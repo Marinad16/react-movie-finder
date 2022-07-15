@@ -1,12 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "./Navigation";
+import React from "react";
+import SearchForm from "../UI/SearchForm/SearchForm";
+import {Logo} from "./Logo";
 
 const Layout = () => {
+
   return (
     <>
       <header className="site-header">
-        <div className="container">
+        <div className="container header">
+          <Logo/>
           <Navigation />
+          <SearchForm />
         </div>
       </header>
 
@@ -25,5 +31,5 @@ const Layout = () => {
   );
 };
 
-export default Layout
+export default Layout;
 

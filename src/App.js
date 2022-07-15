@@ -5,7 +5,7 @@ import MovieDetailsPage from "./pages/MoviesDetailsPage";
 import MoviesPage from "./pages/MoviesPage";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
-import './index.css'
+import './index.scss'
 import './normalize.css'
 
 const App = () => {
@@ -14,8 +14,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="/movies" element={<MoviesPage />} />
-            <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
+            <Route path="movies" element={<MoviesPage />} />
+              <Route path="movies/:text" element={<MoviesPage />} />
+            <Route path="movies/:movieId" element={<MovieDetailsPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           {/* <Route path="/movies/:movieId" component={HomePage} />

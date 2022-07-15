@@ -1,0 +1,15 @@
+@import "../../index";
+
+.button {
+  border: 1px solid $AccentMainColor;
+  color: $AccentMainColor;
+  padding: 10px 20px;
+  border-radius: 30px;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+  &:hover {
+    color: $MainColor;
+    background-color: $AccentColor;
+  }
+}

@@ -1,0 +1,140 @@
+$MainColor: #FFFFFF;
+$AccentMainColor: #B1A7A6;
+$AccentColor: #BA181B;
+$BackgroundColor: #161A1D;
+
+html {
+  box-sizing: border-box;
+  color: $MainColor;
+  background-color: $BackgroundColor;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1201px;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  display: block;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+ }
+
+.nav {
+  &-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+  &-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 30px;
+    color: $AccentMainColor;
+    font-weight: 600;
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: $MainColor;
+    }
+  }
+}
+
+  .active-link {
+    color: $MainColor;
+  }
+
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .movie {
+    &-link {
+      text-decoration: none;
+    }
+
+    &-item {
+      width: 230px;
+      height: 400px;
+      margin-bottom: 20px;
+      & img {
+        height: 345px;
+        width: 230px;
+      }
+    }
+
+    &-title {
+      color: $AccentMainColor;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      &:hover {
+        color: $MainColor;
+      }
+    }
+  }
