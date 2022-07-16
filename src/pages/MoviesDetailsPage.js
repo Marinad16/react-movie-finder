@@ -21,7 +21,7 @@ const MoviesDetailsPage = () => {
           />
             <div>
               <p>genres: {movie.genres.map((genre) => (
-                  <p>{genre.name}</p>
+                  <p key={genre.id}>{genre.name}</p>
                   )
               )}</p>
               <p>budget: {movie.budget}</p>
