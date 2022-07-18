@@ -8,15 +8,17 @@ const LastMoviesPage = () => {
     const [movies, setMovies] = useState([]);
 
 
-    // useEffect(() => {
-    //     MoviesApi.fetchMovieWithQuery(movieQuery).then((data) => setMovies(data));
-    // }, [movieQuery]);
+    useEffect(() => {
+        MoviesApi.fetchLastMovies("now_playing").then((data) => setMovies(data));
+    }, []);
 
+console.log(movies)
 
     return (
         <div>
+            <h1>Now playing</h1>
             {movies === [] && (<NotFound />)}
-            {/*{movies !== [] && (<MovieList query={movies} />)}*/}
+            {movies !== [] && (<MovieList query={movies} />)}
         </div>
     );
 };

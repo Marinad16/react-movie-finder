@@ -5,6 +5,7 @@ $BackgroundColor: #161A1D;
 
 html {
   box-sizing: border-box;
+  height: 100%;
   color: $MainColor;
   background-color: $BackgroundColor;
   font-family: 'Montserrat', sans-serif;
@@ -16,6 +17,12 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 160px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -137,4 +144,15 @@ img {
         color: $MainColor;
       }
     }
+  }
+
+  .footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }

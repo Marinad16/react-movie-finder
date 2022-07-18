@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import React from "react";
 import SearchForm from "../UI/SearchForm/SearchForm";
 import {Logo} from "./Logo";
+import Footer from "./Footer";
 
 const Layout = () => {
 
@@ -23,8 +24,8 @@ const Layout = () => {
       </main>
 
       <footer>
-        <div className="container">
-          footer
+        <div className="container footer">
+          <Footer/>
         </div>
       </footer>
     </>
