@@ -16,13 +16,10 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="movies" element={<LastMoviesPage />} />
-              <Route path="movies/search" element={<MoviesPage />} />
+            <Route path="movies/search" element={<MoviesPage />} />
             <Route path="movies/:movieId" element={<MovieDetailsPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-          {/* <Route path="/movies/:movieId" component={HomePage} />
-          <Route path="/movies/:movieId/cast" component={HomePage} />
-          <Route path="/movies/:movieId/reviews" component={HomePage} /> */}
         </Routes>
       </>
     );

@@ -1,0 +1,66 @@
+@import "src/index";
+.posterWrapper {
+  width: 100%;
+  height: 500px;
+  background-color: #0f1011;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoWrapper {
+  width: 600px;
+  margin: auto;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.voteWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.vote {
+  font-size: 18px;
+}
+
+.overview {
+  margin-bottom: 30px;
+}
+
+.poster {
+  width: auto;
+}
+
+.button {
+  width: fit-content;
+  text-decoration: none;
+  border: 1px solid $AccentMainColor;
+  color: $AccentMainColor;
+  padding: 10px 20px;
+  border-radius: 30px;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $MainColor;
+    background-color: $AccentColor;
+    border-color: $AccentColor;
+  }
+}
+
+i {
+  font-size: 30px;
+
+  &.bxs-star:before {
+    color:  #BA181B;
+  }
+}

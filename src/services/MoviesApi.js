@@ -20,10 +20,10 @@ const fetchTrendingMovies = (period) => {
     .then((result) => result.results);
 }
 
-const fetchLastMovies = (now) => {
-    return fetch(`${baseUrl}/movie/${now}?api_key=${apiKey}`)
+const fetchLastMovies = (latest) => {
+    return fetch(`${baseUrl}/movie/${latest}?api_key=${apiKey}`)
         .then((res) => res.json())
         .then((result) => result.results);
 }
 
-export { fetchMovieDetails, fetchMovieWithQuery, fetchTrendingMovies, fetchLastMovies };
+export default{ fetchMovieDetails, fetchMovieWithQuery, fetchTrendingMovies, fetchLastMovies };

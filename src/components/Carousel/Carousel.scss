@@ -1,0 +1,54 @@
+@import "../../index.scss";
+
+.rec.rec {
+  &-carousel-wrapper {
+    position: relative;
+  }
+
+  &-arrow {
+    background-color: $AccentColor;
+    opacity: 0.5;
+
+    &-right {
+      position: absolute;
+      right: 0;
+    }
+
+    &-left {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+    }
+
+    &:hover:enabled {
+      background-color: $AccentColor;
+      opacity: 1;
+    }
+
+    &:focus:enabled {
+      background-color: $AccentColor;
+    }
+
+    &:active {
+      visibility: hidden;
+      background-color: $AccentColor;
+    }
+  }
+
+  &-dot {
+    &:hover {
+      box-shadow: 0 0 1px 3px $AccentColor;
+    }
+
+    &_active {
+      background-color: $AccentColor;
+      box-shadow: 0 0 1px 3px $AccentColor;
+
+      &:focus {
+        background-color: $AccentColor;
+        box-shadow: 0 0 1px 3px $AccentColor;
+      }
+    }
+
+  }
+}

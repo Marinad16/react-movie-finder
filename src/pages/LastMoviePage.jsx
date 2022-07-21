@@ -7,7 +7,6 @@ import NotFound from "./NotFound";
 const LastMoviesPage = () => {
     const [movies, setMovies] = useState([]);
 
-
     useEffect(() => {
         MoviesApi.fetchLastMovies("now_playing").then((data) => setMovies(data));
     }, []);
