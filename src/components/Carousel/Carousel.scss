@@ -1,6 +1,10 @@
 @import "../../index.scss";
 
 .rec.rec {
+  &-slider-container {
+    margin: 0;
+  }
+
   &-carousel-wrapper {
     position: relative;
   }
@@ -9,16 +13,16 @@
     background-color: $AccentColor;
     opacity: 0.5;
 
-    &-right {
-      position: absolute;
-      right: 0;
-    }
-
-    &-left {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-    }
+    //&-right {
+    //  position: absolute;
+    //  right: 0;
+    //}
+    //
+    //&-left {
+    //  position: absolute;
+    //  z-index: 1;
+    //  left: 0;
+    //}
 
     &:hover:enabled {
       background-color: $AccentColor;

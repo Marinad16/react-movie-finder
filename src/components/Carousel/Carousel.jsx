@@ -17,7 +17,7 @@ const HomeCarousel = () => {
         { width:1, itemsToShow: 1},
         { width:550, itemsToShow: 2},
         { width:768, itemsToShow: 3},
-        { width:1081, itemsToShow: 4},
+        { width:1101, itemsToShow: 4},
     ]
 
     return (

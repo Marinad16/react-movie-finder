@@ -7,10 +7,8 @@ const LatestMovie = () => {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        MoviesApi.fetchLastMovies("now_playing").then((data) => setMovie(data[0]));
+        MoviesApi.fetchLastMovies("now_playing").then((data) => setMovie(data.results[0]));
     }, []);
-
-    console.log(movie)
 
     return (
         <section className={style.posterWrapper}>

@@ -5,7 +5,7 @@ import MoviesApi from "../services/MoviesApi";
 import NotFound from "./NotFound";
 import "../index.scss"
 
-const MoviesPage = () => {
+const SearchMoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
 
@@ -14,8 +14,6 @@ const MoviesPage = () => {
   useEffect(() => {
     MoviesApi.fetchMovieWithQuery(movieQuery).then((data) => setMovies(data));
   }, [movieQuery]);
-
-  console.log(movieQuery)
 
   return (
     <section>
@@ -26,4 +24,4 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;
+export default SearchMoviesPage;

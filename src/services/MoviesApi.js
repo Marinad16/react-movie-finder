@@ -20,10 +20,9 @@ const fetchTrendingMovies = (period) => {
     .then((result) => result.results);
 }
 
-const fetchLastMovies = (latest) => {
-    return fetch(`${baseUrl}/movie/${latest}?api_key=${apiKey}`)
-        .then((res) => res.json())
-        .then((result) => result.results);
+const fetchLastMovies = async (latest, page= 1) => {
+    return await fetch(`${baseUrl}/movie/${latest}?api_key=${apiKey}&page=${page}`)
+        .then((res) => res.json());
 }
 
 export default{ fetchMovieDetails, fetchMovieWithQuery, fetchTrendingMovies, fetchLastMovies };
