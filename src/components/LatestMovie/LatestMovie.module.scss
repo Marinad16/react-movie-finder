@@ -5,11 +5,21 @@
   background-color: #0f1011;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 780px){
+    max-width: 480px;
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .infoWrapper {
   width: 600px;
   margin: auto;
+
+  @media screen and (max-width: 780px){
+    max-width: 450px;
+  }
 }
 
 .title {
@@ -26,6 +36,7 @@
 
 .vote {
   font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .overview {
@@ -34,6 +45,11 @@
 
 .poster {
   width: auto;
+
+  @media screen and (max-width: 780px){
+    width: 300px;
+    margin: 20px auto;
+  }
 }
 
 .button {

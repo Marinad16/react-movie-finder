@@ -1,3 +1,8 @@
+.title {
+  font-size: 32px;
+  margin: 30px 0;
+}
+
 .contentWrapper {
   display: flex;
   margin-bottom: 30px;
@@ -5,6 +10,10 @@
 
 .infoWrapper {
   margin-left: 150px;
+
+  @media screen and (max-width: 1200px){
+    margin-left: 50px;
+  }
 }
 
 table {

@@ -23,7 +23,6 @@ const SearchForm = () => {
                 name="search"
                 type="text"
                 autoComplete="off"
-                autoFocus
                 placeholder="Search movies"
             />
         </form>);

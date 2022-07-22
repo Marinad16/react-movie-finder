@@ -53,6 +53,19 @@ img {
 .container {
   max-width: 1201px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1200px){
+    max-width: 768px;
+  }
+
+  @media screen and (max-width: 780px){
+    max-width: 480px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  margin: 30px 0  ;
 }
 
 .link {
@@ -79,13 +92,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.navigation {
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (max-width: 780px){
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -93,71 +104,17 @@ img {
   align-items: center;
  }
 
-.nav {
-  &-list {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin-left: 100px;
-  }
+.footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-  &-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-right: 30px;
-    color: $AccentMainColor;
-    font-weight: 600;
-    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 1200px){
 
-    &:hover {
-      color: $MainColor;
-    }
   }
 }
-
-  .active-link {
-    color: $MainColor;
-  }
-
-  .movies-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .movie {
-    &-link {
-      text-decoration: none;
-    }
-
-    &-item {
-      width: 230px;
-      height: 400px;
-      margin-bottom: 20px;
-      & img {
-        height: 345px;
-        width: 230px;
-      }
-    }
-
-    &-title {
-      color: $AccentMainColor;
-      font-weight: 400;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      &:hover {
-        color: $MainColor;
-      }
-    }
-  }
-
-  .footer {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }

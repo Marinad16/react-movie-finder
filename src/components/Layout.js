@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 import React from "react";
-import SearchForm from "../UI/SearchForm/SearchForm";
+import SearchForm from "./SearchForm/SearchForm";
 import {Logo} from "./Logo";
 import Footer from "./Footer";
 

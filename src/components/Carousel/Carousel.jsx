@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import {Link} from "react-router-dom";
 import MoviesApi from "../../services/MoviesApi";
 import "./Carousel.scss"
+import style from "../MovieList/MovieList.module.scss"
 
 const HomeCarousel = () => {
     const [movies, setMovies] = useState([]);
@@ -21,20 +22,20 @@ const HomeCarousel = () => {
 
     return (
         <section>
-            <h1>Trending now</h1>
+            <h1 className="title">Trending now</h1>
             <div className="style">
-                <Carousel breakPoints={breakPoints} >
-                    {movies.map((movie) => (
-                        <li key={movie.id} className="item movie-item">
-                            <Link className="movie-link" to={`/movies/${movie.id}`}>
-                                <img
-                                    src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                                    alt={movie.original_title}
-                                />
-                                <p className="movie-title">{movie.original_title}</p>
-                            </Link>
-                        </li>
-                    ))}
+                <Carousel breakPoints={breakPoints}  className={style.moviesList}>
+                        {movies.map((movie) => (
+                            <li key={movie.id} className={style.movieItem}>
+                                <Link className={style.movieLink} to={`/movies/${movie.id}`}>
+                                    <img
+                                        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                                        alt={movie.original_title}
+                                    />
+                                    <p className={style.movieTitle}>{movie.original_title}</p>
+                                </Link>
+                            </li>
+                        ))}
                 </Carousel>
             </div>
         </section>

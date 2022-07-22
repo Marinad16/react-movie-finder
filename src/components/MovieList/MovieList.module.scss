@@ -1,0 +1,37 @@
+@import "../../index";
+
+.moviesList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie {
+  &Link {
+    text-decoration: none;
+    display: block;
+  }
+
+  &Item {
+    width: 230px;
+    height: 400px;
+    margin-bottom: 20px;
+    & img {
+      height: 345px;
+      width: 230px;
+    }
+  }
+
+  &Title {
+    color: $AccentMainColor;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover {
+      color: $MainColor;
+    }
+  }
+}
