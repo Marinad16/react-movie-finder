@@ -13,7 +13,7 @@ const Navigation = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/movies" className={setActiveLink}>
+        <NavLink to="/movies?page=1" className={setActiveLink}>
           Movies
         </NavLink>
       </li>

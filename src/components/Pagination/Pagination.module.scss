@@ -1,0 +1,26 @@
+@import "src/index";
+
+.moviesList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: $AccentMainColor;
+}
+
+.movieItem {
+  padding: 10px;
+}
+
+.active {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: $MainColor;
+  background-color: $AccentColor;
+  padding: 10px;
+}
