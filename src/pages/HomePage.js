@@ -1,12 +1,12 @@
 import React from "react";
 import HomeCarousel from "../components/Carousel/Carousel";
-import LatestMovie from "../components/LatestMovie/LatestMovie";
+import LatestMoviePoster from "../components/LatestMovie/LatestMoviePoster";
 
 const HomePage = () => {
 
   return (
     <>
-        <LatestMovie/>
+        <LatestMoviePoster/>
         <HomeCarousel/>
     </>
   );

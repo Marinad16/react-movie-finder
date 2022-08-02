@@ -1,7 +1,4 @@
-$MainColor: #FFFFFF;
-$AccentMainColor: #B1A7A6;
-$AccentColor: #BA181B;
-$BackgroundColor: #161A1D;
+@import "SCSS/variables";
 
 html {
   box-sizing: border-box;
@@ -60,6 +57,10 @@ img {
 
   @media screen and (max-width: 780px){
     max-width: 480px;
+  }
+
+  @media screen and (max-width: 480px){
+    max-width: 360px;
   }
 }
 

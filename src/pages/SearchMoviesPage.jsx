@@ -1,10 +1,10 @@
-import { useSearchParams } from "react-router-dom";
-import MovieList from '../components/MovieList/MovieList';
 import React, {useEffect, useState} from "react";
+import { useSearchParams } from "react-router-dom";
 import MoviesApi from "../services/MoviesApi";
-import NotFound from "./NotFound";
 import "../index.scss"
 import Pagination from "../components/Pagination/Pagination";
+import MovieList from '../components/MovieList/MovieList';
+import NotFound from "./NotFound";
 
 const SearchMoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -12,7 +12,7 @@ const SearchMoviesPage = () => {
   const [currentPage, setCurrentPage] = useState(searchParams.get('page') || "")
   const [movieQuery] = useState(searchParams.get('query') || "");
 
-  const blabla = (curpage)=>{
+  const handleParams = (curpage)=>{
     setCurrentPage(curpage)
     searchParams.set('query', movieQuery)
     searchParams.set('page', curpage)
@@ -28,7 +28,7 @@ const SearchMoviesPage = () => {
       <h1 className="title">You are searching: {movieQuery}</h1>
       {movies.results === [] && (<NotFound />)}
       {movies.results !== [] && (<MovieList query={movies.results} />)}
-      {movies.total_results !== 0 && (<Pagination totalPosts={movies.total_results} postsPerPage={movies.results.length} setCurrentPage={blabla} searchParams={searchParams}/>)}
+      {movies.total_results !== 0 && (<Pagination totalPosts={movies.total_results} postsPerPage={movies.results.length} setCurrentPage={handleParams} searchParams={searchParams}/>)}
     </section>
   );
 };

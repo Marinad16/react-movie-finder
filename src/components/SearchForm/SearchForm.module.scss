@@ -1,4 +1,4 @@
-@import "../../index";
+@import "../../SCSS/variables";
 
 .SearchForm {
   display: flex;
@@ -16,6 +16,7 @@
 
 .SearchFormbutton {
   display: inline-block;
+  margin-right: 10px;
   width: 26px;
   height: 26px;
   border: none;

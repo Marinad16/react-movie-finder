@@ -1,9 +1,9 @@
-import style from "./LatestMovie.module.scss"
+import style from "./LatestMoviePoster.module.scss"
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import MoviesApi from "../../services/MoviesApi";
 
-const LatestMovie = () => {
+const LatestMoviePoster = () => {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
@@ -38,4 +38,4 @@ const LatestMovie = () => {
     );
 };
 
-export default LatestMovie;
+export default LatestMoviePoster;
