@@ -9,8 +9,7 @@ const SearchForm = () => {
         e.preventDefault();
         const query = e.target.search.value;
         if (query !== "") {
-            console.log(query);
-            navigate(`/movies/search?query=${query}&page=1`)
+            navigate(`/movies/search?query=${query}&page=1`, { replace: true })
             e.target.search.value = ""
         }
     };

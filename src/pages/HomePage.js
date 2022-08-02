@@ -1,6 +1,6 @@
 import React from "react";
 import HomeCarousel from "../components/Carousel/Carousel";
-import LatestMoviePoster from "../components/LatestMovie/LatestMoviePoster";
+import LatestMoviePoster from "../components/LatestMoviePoster/LatestMoviePoster";
 
 const HomePage = () => {
 
